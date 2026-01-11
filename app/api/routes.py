@@ -2,7 +2,7 @@ from fastapi import APIRouter, UploadFile, Form
 import tempfile
 
 from app.services.pdf_parser import extract_text_from_pdf, is_text_based
-from app.services.text_cleaner import clean_text
+from app.utils.text_cleaner import clean_text
 from app.services.section_parser import split_sections
 
 router = APIRouter(prefix="/cv", tags=["CV"])
